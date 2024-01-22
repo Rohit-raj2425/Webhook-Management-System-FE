@@ -1,0 +1,71 @@
+/* SignUp.css */
+
+.signupcontainer {
+  /* width: 100%; */
+  /* max-width: 400px; */
+  background: #fff;
+  margin: auto;
+  padding: 2rem 5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signupcontainer h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.signupcontainer p {
+  margin-bottom: 3rem;
+  color: #666;
+  font-size: 14px;
+}
+
+.inputgroup {
+  margin-bottom: 15px;
+}
+
+.inputgroup input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signupbutton, .googlesignup {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signupbutton {
+  width: 100%;
+  background-color: #a855f7; /* Sign up button color */
+  margin-top: 20px; /* Space from the last input */
+}
+
+.signupbutton:hover {
+  background-color: #9333ea;
+}
+
+.loginlink {
+  margin-top: 20px;
+}
+
+.loginlink .login {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.loginlink .login:hover {
+  text-decoration: underline;
+}
