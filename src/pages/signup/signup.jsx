@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import classes from "./signup.module.css";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -13,9 +16,23 @@ const SignUp = () => {
             alert("Passwords don't match.");
             return;
         }
-        // Implement sign-up logic here
-        console.log('Sign Up', { username, email, password });
-        // Typically, you would send a request to your backend server here
+        try {
+            const response = await axios.post('http://localhost:8000/v1/signup', {
+                username,
+                email,
+                password
+            });
+
+            if (response.status === 200) {
+                console.log('Sign Up Successful', response.data);
+                navigate('/login');
+              } else {
+                  console.error('Login failed:', response.data.message);
+              }
+
+        } catch (error) {
+            console.error('Error during sign up:', error);
+        }
     };
 
     return (

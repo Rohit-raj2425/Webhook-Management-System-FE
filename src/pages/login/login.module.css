@@ -1,5 +1,5 @@
 .loginContainer {
-  background-color: #fff; /* Background of the login form */
+  background-color: #fff;
   padding: 2rem 5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,8 +45,6 @@
 }
 
 .signuplink {
-  /* display: block;
-  margin-top: 1rem; */
   color: #0077cc;
   text-decoration: none;
 }

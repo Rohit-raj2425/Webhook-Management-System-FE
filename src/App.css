@@ -1,6 +1,6 @@
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(120deg, #f6d2ff, #f7f0f0); /* Adjust the color to match the image */
+  background: linear-gradient(120deg, #f6d2ff, #f7f0f0);
   margin: 0;
   padding: 0;
   display: flex;

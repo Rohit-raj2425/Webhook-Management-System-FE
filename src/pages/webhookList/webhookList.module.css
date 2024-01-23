@@ -1,0 +1,87 @@
+/* WebhookList.css */
+
+/* h1 {
+  padding-left: 40%;
+}
+
+.WebhookList {
+  list-style: none;
+  padding: 0;
+}
+
+.webhookListItem {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.webhookListItem:hover {
+  background-color: #f0f0f0;
+}
+
+.webhookColumn {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.webhookolumn:first-child {
+  margin-right: 10px;
+} */
+
+/* WebhookList.css */
+
+.webhookList {
+  list-style: none;
+  padding: 0;
+}
+
+.webhookItem {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.webhookColumn {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.webhookColumn:first-child {
+  margin-right: 10px;
+}
+
+.webhookContainer {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.webhookTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.addWebhookBtn {
+  display: block;
+  width: max-content;
+  margin: 1rem auto 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addWebhookBtn:hover {
+  background-color: #45a049;
+}
+

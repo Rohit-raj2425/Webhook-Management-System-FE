@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import classes from "./login.module.css";
 import { useAuth } from '../../store/auth';
@@ -7,6 +8,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const auth = useAuth();
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -21,9 +23,8 @@ const Login = () => {
           if (response.status === 200) {
             auth.login(response.data.token);
             console.log('Token:', response.data.token);
-            window.location.href = "/dashboad"
+            navigate('/webhookList');
           } else {
-              // Handle errors, e.g., show an error message
               console.error('Login failed:', response.data.message);
           }
       } catch (error) {

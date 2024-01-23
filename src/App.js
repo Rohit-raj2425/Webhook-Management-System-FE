@@ -3,22 +3,33 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./pages/login/login";
 import SignUp from "./pages/signup/signup";
-import { AuthProvider } from './store/auth';
-import { PrivateRoute } from "./privateRoute";
+import WebhookList from "./pages/webhookList/webhookList";
+import SubscribeForm from "./pages/subscribeForm/subscribeForm";
+import { AuthProvider } from "./store/auth";
+import PrivateRoute from "./privateRoute";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-        {/* <Route
-              path="/dashboad"
-              element={
-                <PrivateRoute>
-                  <SignUp />
-                </PrivateRoute>
-              }
-            /> */}
+          <Route
+            path="/webhookList"
+            element={
+              <PrivateRoute>
+                <WebhookList />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/subscribeWebhook"
+            element={
+              <PrivateRoute>
+                <SubscribeForm />
+              </PrivateRoute>
+            }
+          />
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
